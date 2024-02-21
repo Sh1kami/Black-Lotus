@@ -1,0 +1,45 @@
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA4MjkzMDg0LCJleHAiOjE3MDgyOTY2ODR9.IwqLftwOw6c3yAwGWhok1T4fWNEnmE7bTipJc57NQGI<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <div id="product-details"></div>
+
+    <script>
+        let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA4MjkzMDg0LCJleHAiOjE3MDgyOTY2ODR9.IwqLftwOw6c3yAwGWhok1T4fWNEnmE7bTipJc57NQGI"; // Ваш токен авторизации
+        let productId = 2; // ID товара
+
+        fetch(`http://localhost:4200/api/products/${productId}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        })
+        .then(response => response.json())
+        .then(product => {
+            let productDetailsDiv = document.getElementById('product-details');
+
+            let imagesHTML = product.images.map(imageUrl => `<img src="${imageUrl}" alt="Product Image">`).join('');
+            let reviewsHTML = product.reviews.map(review => `
+                <div>
+                    <h3>${review.user.name}</h3>
+                    <p>${review.text}</p>
+                    <p>Rating: ${review.rating}</p>
+                </div>
+            `).join('');
+
+            let newContent = `
+                <h2>${product.name}</h2>
+                <p>${product.description}</p>
+                <p>Price: ${product.price}</p>
+                <div>${imagesHTML}</div>
+                <div>${reviewsHTML}</div>
+            `;
+
+            productDetailsDiv.innerHTML = newContent;
+        })
+        .catch((error) => console.error('Error:', error));
+    </script>
+</body>
+</html>
