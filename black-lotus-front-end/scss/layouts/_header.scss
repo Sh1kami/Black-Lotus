@@ -1,0 +1,42 @@
+.header {
+	&__first {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__hero-logo {
+		display: flex;
+		overflow: hidden;
+		margin-bottom: 20px;
+		fill: var(--main-white-color);
+	}
+
+	&__categories {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		gap: 15px;
+	}
+
+	&__second {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__second-inside {
+		align-items: center;
+		display: flex;
+		justify-content: right;
+	}
+
+	&__menu {
+		align-items: center;
+		display: flex;
+		justify-content: right;
+		position: absolute;
+		right: 100px;
+	}
+}

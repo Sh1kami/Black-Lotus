@@ -1,0 +1,26 @@
+* {
+	box-sizing: border-box;
+	scrollbar-width: none;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--main-white-color);
+	font-family: Xarrovv;
+	background-color: #f6f6f6;
+}
+
+a {
+	color: var(--main-white-color);
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}

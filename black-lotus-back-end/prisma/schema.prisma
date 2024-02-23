@@ -38,6 +38,7 @@ model Product {
   description String
   price       Int
   images      String[]
+  status      Boolean
 
   orderItems OrderItem[]
   reviews    Review[]

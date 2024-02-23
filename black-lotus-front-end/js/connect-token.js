@@ -1,0 +1,1 @@
+let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA4NzE5MjE4LCJleHAiOjE3MDg3MjI4MTh9.-FRy_PpkzBWkYLqatzuvgre6p_prO8EK_hKYJjPe9DQ'

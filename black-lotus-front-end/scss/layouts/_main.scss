@@ -1,0 +1,32 @@
+.main {
+	&__phrase {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		margin-top: 500px;
+		padding: 50px;
+		color: var(--main-black-color);
+		background-color: var(--main-white-color);
+	}
+
+	&__phrase-inside {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		text-align: center;
+	}
+
+	&__content {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__products-by-category {
+		display: flex;
+		justify-content: center;
+		padding: 50px;
+		flex-wrap: wrap;
+		gap: 50px;
+	}
+}

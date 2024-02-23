@@ -1,5 +1,11 @@
 import { Prisma } from '@prisma/client'
-import { ArrayMinSize, IsNumber, IsOptional, IsString } from 'class-validator'
+import {
+	ArrayMinSize,
+	IsBoolean,
+	IsNumber,
+	IsOptional,
+	IsString
+} from 'class-validator'
 
 export class ProductDto implements Prisma.ProductUpdateInput {
 	@IsString()
@@ -18,4 +24,8 @@ export class ProductDto implements Prisma.ProductUpdateInput {
 
 	@IsNumber()
 	categoryId: number
+
+	@IsOptional()
+	@IsBoolean()
+	status: boolean
 }

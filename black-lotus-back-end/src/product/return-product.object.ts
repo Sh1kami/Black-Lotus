@@ -9,7 +9,8 @@ export const productReturnObject: Prisma.ProductSelect = {
 	name: true,
 	price: true,
 	createdAt: true,
-	slug: true
+	slug: true,
+	status: true
 }
 
 export const productReturnObjectFullest: Prisma.ProductSelect = {
