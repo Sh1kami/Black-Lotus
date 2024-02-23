@@ -27,7 +27,7 @@ fetch(`http://localhost:4200/api/categories/`, {
 			.map(category => {
 				return `
                     <div class="category">
-    					<a href="#" data-slug="${category.slug}" onclick="getProductsByCategory('${category.slug}')">${category.name}</a>
+    					<a href="#" onclick="getProductsByCategory('${category.slug}')">${category.name}</a>
 					</div>
 `
 			})

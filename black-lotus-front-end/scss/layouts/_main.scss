@@ -1,4 +1,10 @@
 .main {
+	&__title {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+		font-size: 32px;
+	}
 	&__phrase {
 		align-items: center;
 		display: flex;
@@ -6,7 +12,20 @@
 		margin-top: 500px;
 		padding: 50px;
 		color: var(--main-black-color);
+		font-size: 30px;
+		font-weight: bold;
+		text-transform: uppercase;
+		word-spacing: 16px;
 		background-color: var(--main-white-color);
+		text-shadow: 0.5px 0 0 var(--main-black-color), 0 0.5px 0 var(--main-black-color), -0.5px 0 0 var(--main-black-color), 0 -0.5px 0 var(--main-black-color);
+	}
+
+	&__phrase span {
+		margin: 0 16px;
+		padding: 5px 16px;
+		color: var(--main-white-color);
+		background-color: var(--main-black-color);
+		text-shadow: 0.5px 0 0 var(--main-white-color), 0 0.5px 0 var(--main-white-color), -0.5px 0 0 var(--main-white-color), 0 -0.5px 0 var(---main-white-color);
 	}
 
 	&__phrase-inside {
@@ -29,4 +48,14 @@
 		flex-wrap: wrap;
 		gap: 50px;
 	}
+
+	&__category-title {
+		color: var(--main-black-color);
+	}
+}
+.body-background {
+	background-attachment: fixed;
+	background-image: url(../images/bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }

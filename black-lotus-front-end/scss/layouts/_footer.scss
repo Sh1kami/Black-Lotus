@@ -1,14 +1,17 @@
 .footer {
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 	padding: 15px;
 	background-color: var(--main-black-color);
 	flex-direction: column;
+
 	&__first {
 		display: flex;
 		justify-content: space-between;
 	}
 	&__second {
+		align-items: end;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -17,6 +20,7 @@
 		align-items: center;
 		display: flex;
 		justify-content: left;
+		font-size: 20px;
 		gap: 15px;
 	}
 
@@ -30,5 +34,70 @@
 		display: flex;
 		margin-left: 10px;
 		fill: var(--main-white-color);
+	}
+
+	&__social {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+	&__social-inside {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		fill: var(--main-white-color);
+	}
+
+	&__shipping {
+		color: var(--main-gray-color);
+		font-size: 20px;
+		text-align: right;
+	}
+
+	&__payments-title {
+		color: var(--main-gray-color);
+		font-size: 20px;
+	}
+
+	&__payments-icons {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		fill: var(--main-white-color);
+		gap: 10px;
+	}
+	&__contacts-title {
+		margin-right: 50px;
+		color: var(--main-gray-color);
+		font-size: 20px;
+	}
+
+	&__contacts-title-inside {
+		align-items: center;
+		display: flex;
+	}
+
+	&__contacts-content {
+		display: flex;
+		color: var(--main-white-color);
+		text-align: left;
+		flex-direction: column;
+	}
+
+	&__contacts-icons {
+		align-items: centers;
+		display: flex;
+		justify-content: center;
+		margin-right: 40px;
+		fill: var(--main-gray-color);
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	&__third {
+		bottom: 10px;
+		left: 50%;
+		position: absolute;
+		right: 50%;
 	}
 }

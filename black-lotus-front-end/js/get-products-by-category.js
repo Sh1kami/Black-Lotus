@@ -1,5 +1,3 @@
-// Assuming you have 'token' defined globally or imported properly
-
 function getProductsByCategory(categorySlug) {
 	const productDetailsDiv = document.getElementById('products-by-category')
 

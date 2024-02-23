@@ -5,6 +5,7 @@
 	position: relative;
 	height: 700px;
 	width: 500px;
+	cursor: default;
 	flex-direction: column;
 
 	&:hover {
@@ -28,6 +29,7 @@
 		border: none;
 		border-radius: 30px;
 		transition: opacity 0.3s ease;
+		cursor: pointer;
 		cursor: pointer;
 		transform: translate(-50%, -50%);
 		opacity: 0;
@@ -113,5 +115,6 @@
 		border-radius: 30px;
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 		transition: color 0.3s ease, background-color 0.3s ease;
+		cursor: pointer;
 	}
 }

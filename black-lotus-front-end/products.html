@@ -10,7 +10,7 @@
 		<link rel="icon" href="./images/favicon.ico" />
 	</head>
 	<body>
-		<header class="header">
+		<header class="header" style="background-color: var(--main-black-color)">
 			<div class="header__first">
 				<div class="header__first-inside">
 					<a class="header__hero-logo" href="index.html">
@@ -28,6 +28,7 @@
 			</div>
 		</header>
 		<main class="main">
+			<div class="main__title"><h2 id="category-title" class="main__category-title">Усі товари</h2></div>
 			<div class="main__content">
 				<div id="products-by-category" class="main__products-by-category"></div>
 			</div>
@@ -65,5 +66,6 @@
 	<!-- Include the scripts in the correct order -->
 	<script src="./js/connect-token.js"></script>
 	<script src="./js/get-categories.js"></script>
+	<script src="./js/get-products.js"></script>
 	<script src="./js/get-products-by-category.js"></script>
 </html>
