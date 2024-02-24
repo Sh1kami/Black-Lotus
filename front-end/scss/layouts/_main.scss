@@ -52,6 +52,16 @@
 	&__category-title {
 		color: var(--main-black-color);
 	}
+
+	&__product-details {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		padding: 20px;
+		color: var(--main-black-color);
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
 }
 .body-background {
 	background-attachment: fixed;
