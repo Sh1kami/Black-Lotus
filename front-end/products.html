@@ -8,6 +8,7 @@
 		<title>Black Lotus - Інтернет-магазин речей Богдана Панчишкіна</title>
 		<link rel="stylesheet" href="./css/main.min.css" />
 		<link rel="icon" href="./images/favicon.ico" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	</head>
 	<body>
 		<header class="header" style="background-color: var(--main-black-color)">
@@ -29,8 +30,10 @@
 		</header>
 		<main class="main">
 			<div class="main__title"><h2 id="category-title" class="main__category-title">Усі товари</h2></div>
+			<div class="main__title"><h2 id="category-title" class="main__product-title hidden">Подробиці товару</h2></div>
 			<div class="main__content">
 				<div id="products-by-category" class="main__products-by-category"></div>
+				<div id="product-details" class="main__product-details hidden"></div>
 			</div>
 		</main>
 		<footer class="footer">
@@ -108,9 +111,11 @@
 			</div>
 		</footer>
 	</body>
-	<!-- Include the scripts in the correct order -->
 	<script src="./js/connect-token.js"></script>
 	<script src="./js/get-categories.js"></script>
 	<script src="./js/get-products.js"></script>
 	<script src="./js/get-products-by-category.js"></script>
+	<script src="./js/get-product-details.js"></script>
+	<script src="./js/hidden.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </html>

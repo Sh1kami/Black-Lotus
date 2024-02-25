@@ -49,7 +49,8 @@
 		gap: 50px;
 	}
 
-	&__category-title {
+	&__category-title,
+	&__product-title {
 		color: var(--main-black-color);
 	}
 
@@ -59,8 +60,6 @@
 		justify-content: center;
 		padding: 20px;
 		color: var(--main-black-color);
-		background-color: #fff;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	}
 }
 .body-background {

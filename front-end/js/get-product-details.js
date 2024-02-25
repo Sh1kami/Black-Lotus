@@ -1,25 +1,31 @@
-const productId = 5 // Замените на нужный идентификатор товара
+document.addEventListener('DOMContentLoaded', function () {
+	document.body.addEventListener('click', function (event) {
+		var target = event.target
 
-fetch(`http://localhost:4200/api/products/${productId}`, {
-	method: 'GET',
-	headers: {
-		Authorization: 'Bearer ' + token
-	}
-})
-	.then(response => response.json())
-	.then(productData => {
-		if (!productData || !productData.images || !productData.reviews) {
-			console.error('Invalid product data:', productData)
-			return
-		}
+		var isProductCard = target.closest('.product-card')
+		if (isProductCard || target.classList.contains('product-card__more') || target.classList.contains('product-card__name')) {
+			var productId = isProductCard ? isProductCard.getAttribute('data-product-id') : target.closest('.product-card').getAttribute('data-product-id')
 
-		const productDetailsDiv = document.getElementById('product-details')
+			fetch(`http://localhost:4200/api/products/${productId}`, {
+				method: 'GET',
+				headers: {
+					Authorization: 'Bearer ' + token
+				}
+			})
+				.then(response => response.json())
+				.then(productData => {
+					if (!productData || !productData.images || !productData.reviews) {
+						console.error('Invalid product data:', productData)
+						return
+					}
 
-		const imagesHTML = productData.images.map(image => `<img src="${image}" alt="Product Image">`).join('')
+					const productDetailsDiv = document.getElementById('product-details')
 
-		const reviewsHTML = productData.reviews
-			.map(
-				review => `
+					const imagesHTML = productData.images.map(image => `<img src="${image}" alt="Product Image">`).join('')
+
+					const reviewsHTML = productData.reviews
+						.map(
+							review => `
             <div class="review">
            		<div class="review-name"><img src="${review.user.avatarPath}" alt="User Avatar"> ${review.user.name}</div>
                 <p>${review.text}</p>
@@ -27,20 +33,21 @@ fetch(`http://localhost:4200/api/products/${productId}`, {
                 <p>Відгук від: ${new Date(review.createdAt).toLocaleDateString()}</p>
             </div>
         `
-			)
-			.join('')
+						)
+						.join('')
 
-		const productHTML = `
+					const productHTML = `
             <div class="product-details">
 			 <div class="product-images">${imagesHTML}</div>
 				<div class="product-data">
               		<div class ="product-data-name">
 						<h2>${productData.name}</h2>
+						<a href="#" class="product-details__close"><button type="button" class="product-details__close-btn">Назад</button></a>
 					</div>
                		<p>Ціна: ${productData.price} UAH</p>
                 	<p>${productData.description}</p>
 				</div>
-                <div class="product-reviews-container"> <h3>Відгуки</h3>
+                <div class="product-reviews-container"> <h3 class="product-reviews-title">Відгуки</h3>
 					<div class="product-reviews-container-inside">
                 		<div class="product-reviews">${reviewsHTML}</div></div>
             		</div>
@@ -48,6 +55,13 @@ fetch(`http://localhost:4200/api/products/${productId}`, {
 			</div>
         `
 
-		productDetailsDiv.innerHTML = productHTML
+					productDetailsDiv.innerHTML = productHTML
+				})
+				.catch(error => console.error('Error:', error))
+		}
+
+		if (target.classList.contains('product-details__close-btn')) {
+			toggleSectionsVisibility()
+		}
 	})
-	.catch(error => console.error('Error:', error))
+})

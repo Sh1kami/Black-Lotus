@@ -5,6 +5,15 @@
 		justify-content: center;
 	}
 
+	&__button-go {
+		padding: 15px 30px;
+		color: var(--main-white-color);
+		background-color: var(--main-black-color);
+		border: none;
+		border-radius: 30px;
+		cursor: pointer;
+	}
+
 	&__hero-logo {
 		display: flex;
 		overflow: hidden;

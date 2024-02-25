@@ -13,24 +13,24 @@ fetch(`http://localhost:4200/api/products`, {
 				let imagesHTML = product.images.length > 0 ? `<img src="${product.images[0]}" alt="Product Image">` : ''
 
 				return `
-					<div class="main__products-by-category-inside">
-						<div class="main__products-list">
-							<a href="/${product.slug}" class="product-card">
-								<div class="product-card__image">
-									<picture>
-										<source srcset="${product.images[0]}" type="image/webp" />
-										<img src="${product.images[0]}" alt="Product image" class="product-card__image-inside" />
-									</picture>
-									<div class="product-card__blackout"></div>
-									<div class="product-card__price">${product.price} UAH</div>
-									<div class="product-card__status-${product.status}">NEW!</div>
-									<button type="button" class="product-card__more">Детальніше -></button>
-								</div>
-								<button type="button" class="product-card__name">${product.name}</button>
-							</a>
-						</div>
-					</div>
-			`
+      <div class="main__products-by-category-inside">
+        <div class="main__products-list">
+          <a href="#" class="product-card" data-product-id="${product.id}">
+            <div class="product-card__image">
+              <picture>
+                <source srcset="${product.images[0]}" type="image/webp" />
+                <img src="${product.images[0]}" alt="Product image" class="product-card__image-inside" />
+              </picture>
+              <div class="product-card__blackout"></div>
+              <div class="product-card__price">${product.price} UAH</div>
+              <div class="product-card__status-${product.status}">NEW!</div>
+              <button type="button" class="product-card__more">Детальніше -></button>
+            </div>
+            <button type="button" class="product-card__name">${product.name}</button>
+          </a>
+        </div>
+      </div>
+  `
 			})
 			.join('')
 
