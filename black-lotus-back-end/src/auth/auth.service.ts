@@ -16,6 +16,9 @@ import { AuthDto } from './dto/auth.dto'
 
 @Injectable()
 export class AuthService {
+	static getNewTokens() {
+		throw new Error('Method not implemented.')
+	}
 	constructor(
 		private prisma: PrismaService,
 		private jwt: JwtService

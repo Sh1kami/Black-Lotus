@@ -1,0 +1,8 @@
+.category {
+	transition: 0.3s;
+
+	:hover {
+		color: var(--secondary-gray-color);
+		transition: 0.3s;
+	}
+}

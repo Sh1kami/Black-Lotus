@@ -5,11 +5,27 @@
 		margin-top: 50px;
 		font-size: 32px;
 	}
+
+	&__button-go {
+		margin-top: 250px;
+		padding: 15px 30px;
+		color: var(--main-black-color);
+		background-color: var(--main-white-color);
+		border: none;
+		border-radius: 30px;
+		transition: 0.3s ease;
+		cursor: pointer;
+	}
+
+	&__button-go:hover {
+		color: var(--main-white-color);
+		background-color: var(--main-black-color);
+	}
 	&__phrase {
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		margin-top: 500px;
+		margin-top: 350px;
 		padding: 50px;
 		color: var(--main-black-color);
 		font-size: 30px;

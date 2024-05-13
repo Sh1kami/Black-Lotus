@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					</div>
                		<p>Ціна: ${productData.price} UAH</p>
                 	<p>${productData.description}</p>
+					<button type="button" class="product-details__add-to-cart">Додати до кошику</button>
 				</div>
                 <div class="product-reviews-container"> <h3 class="product-reviews-title">Відгуки</h3>
 					<div class="product-reviews-container-inside">

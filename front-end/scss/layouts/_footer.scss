@@ -45,7 +45,15 @@
 		align-items: center;
 		display: flex;
 		justify-content: center;
+		transition: 0.3s ease;
 		fill: var(--main-white-color);
+	}
+
+	&__social-inside:hover {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		fill: var(--main-gray-color);
 	}
 
 	&__shipping {
@@ -99,5 +107,10 @@
 		left: 50%;
 		position: absolute;
 		right: 50%;
+	}
+
+	&__categories-block {
+		display: flex;
+		gap: 15px;
 	}
 }

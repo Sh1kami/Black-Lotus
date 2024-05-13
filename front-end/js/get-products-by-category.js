@@ -28,7 +28,7 @@ function getProductsByCategory(categorySlug) {
 					return `
                         <div class="main__products-by-category-inside">
                             <div class="main__products-list">
-                                <a href="/${product.slug}" class="product-card">
+                                <a href="#" class="product-card" data-product-id="${product.id}">
                                     <div class="product-card__image">
                                         <picture>
                                             <source srcset="${product.images[0]}" type="image/webp" />

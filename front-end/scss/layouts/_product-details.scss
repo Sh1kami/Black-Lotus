@@ -3,11 +3,21 @@
 	width: 100%;
 	flex-wrap: wrap;
 
+	&__add-to-cart {
+		max-width: 200px;
+		padding: 15px 30px;
+		color: var(--main-white-color);
+		background-color: var(--main-black-color);
+		border: none;
+		border-radius: 30px;
+		cursor: pointer;
+	}
+
 	.product-images {
 		align-items: center;
 		display: flex;
 		justify-content: center;
-		width: 70%; /* Изменено на 50% ширины родительского блока */
+		width: 70%;
 		margin-bottom: 20px;
 		padding-right: 20px;
 		box-sizing: border-box; /* Добавлено для учета padding и border в расчете ширины */
