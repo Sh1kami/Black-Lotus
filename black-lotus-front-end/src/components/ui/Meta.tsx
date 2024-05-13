@@ -1,4 +1,4 @@
-import { Head } from 'next/document'
+import Head from 'next/head' // Correct import for Head
 import { useRouter } from 'next/router'
 import { FC, PropsWithChildren } from 'react'
 
@@ -41,7 +41,7 @@ export const Meta: FC<PropsWithChildren<ISeo>> = ({
 								'/black-lotus-front-end/public/images/favicon.ico'
 							}
 						/>
-						{<meta property='og:site_name' content='Black Lotus' />}
+						<meta property='og:site_name' content='Black Lotus' />{' '}
 						<meta property='og:description' content={description} />
 					</>
 				) : (
@@ -52,3 +52,5 @@ export const Meta: FC<PropsWithChildren<ISeo>> = ({
 		</>
 	)
 }
+
+export default Meta
