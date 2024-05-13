@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@font-face {
+	font-family: 'Xarrovv';
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+	src:
+		url('./font/Xarrovv.woff2') format('woff2'),
+		url('./font/Xarrovv.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Xarrovv';
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src:
+		url('./font/XarrovvBold.woff2') format('woff2'),
+		url('./font/XarrovvBold.woff') format('woff');
+}
+
+body {
+	@apply text-base text-black bg-secondary;
+	font-family: 'Ubuntu', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+}
+
+.disabled {
+	text-decoration: none;
+	cursor: default;
+	pointer-events: none;
+	opacity: 0.2 !important;
+}

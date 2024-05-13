@@ -1,4 +1,4 @@
-import '@/assets/styles/globals.css'
+import '@/assets/styles/globals.scss'
 import AuthProvider from '@/providers/auth-provider/AuthProvider'
 import { TypeComponentAuthFields } from '@/providers/auth-provider/auth-pages.types'
 import { persistor, store } from '@/services/store/store'
