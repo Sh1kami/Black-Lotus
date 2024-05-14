@@ -34,7 +34,7 @@ export const checkAuth = createAsyncThunk<IAuthResponse>(
 	'auth/check-auth',
 	async (_, thunkApi) => {
 		try {
-			const response = await AuthService.getNewTOkens()
+			const response = await AuthService.getNewTokens()
 			return response.data as IAuthResponse
 		} catch (error) {
 			if (errorCatch(error) === 'jwt expired') {

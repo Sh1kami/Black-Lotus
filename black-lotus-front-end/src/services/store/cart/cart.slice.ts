@@ -14,11 +14,11 @@ export const cartSlice = createSlice({
 	initialState,
 	reducers: {
 		addToCart: (state, action: PayloadAction<IAddToCartPayload>) => {
-			const isExistSize = state.items.some(
+			const isExist = state.items.some(
 				item => item.size === action.payload.size
 			)
 
-			if (!isExistSize)
+			if (!isExist)
 				state.items.push({ ...action.payload, id: state.items.length })
 		},
 		removeFromCart: (

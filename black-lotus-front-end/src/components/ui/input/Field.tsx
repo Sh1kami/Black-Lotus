@@ -21,7 +21,8 @@ const Field = forwardRef<HTMLInputElement, IField>(
 						className={cn(
 							'bg-white px-4 py-2 w-full outline-none border border-solid border-secondary_text focus:border-black transition-all placeholder:secondary rounded-lg',
 							{
-								'border-red': error
+								'focus:border-red': !!error,
+								'enabled:border-red': !!error
 							}
 						)}
 						{...rest}

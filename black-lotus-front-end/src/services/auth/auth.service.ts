@@ -7,7 +7,7 @@ import { saveToStorage } from './auth.helper'
 export const AuthService = {
 	async main(type: 'login' | 'register', data: IEmailPassword) {
 		const response = await axios<IAuthResponse>({
-			url: `/auth/${type}`,
+			url: `${process.env.SERVER_URL}/auth/${type}`,
 			method: 'POST',
 			data
 		})
@@ -17,7 +17,7 @@ export const AuthService = {
 		return response.data
 	},
 
-	async getNewTOkens() {
+	async getNewTokens() {
 		const refreshToken = Cookies.get('refresh-token')
 
 		const response = await axios.post<string, { data: IAuthResponse }>(
